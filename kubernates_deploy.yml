@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-09-25T17:11:10Z"
+  labels:
+    run: app
+  name: app
+  namespace: default
+  resourceVersion: "7829"
+  selfLink: /api/v1/namespaces/default/services/app
+  uid: 2f3c26c4-7e48-11e9-b1ea-080027d87cc5
+spec:
+  clusterIP: 10.96.207.154
+  externalTrafficPolicy: Cluster
+  ports:
+    - nodePort: 32402
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+selector:
+run: app
+sessionAffinity: None
+type: LoadBalancer
+status:
+loadBalancer: {}
